@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Outfit:wght@300;400;500&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1000px; height: 1000px;
+    background: linear-gradient(145deg, #0D2137 0%, #0a3d52 50%, #0D2137 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Outfit', sans-serif;
+  }
+  .card {
+    width: 860px; height: 860px;
+    background: linear-gradient(160deg, #0f2a45 0%, #0a3d52 100%);
+    border-radius: 32px;
+    border: 1px solid rgba(180,155,60,0.3);
+    box-shadow: 0 0 80px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.05);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 24px; padding: 48px;
+    position: relative; overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(180,155,60,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .card::after {
+    content: '';
+    position: absolute; bottom: -80px; left: -80px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(0,180,200,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .divider { width: 60px; height: 2px; background: #C4963C; border-radius: 2px; }
+  .title {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px; font-weight: 700;
+    color: #FDFAF3; text-align: center; letter-spacing: 2px;
+    line-height: 1.1;
+  }
+  .title span { color: #C4963C; }
+  .subtitle {
+    font-size: 15px; font-weight: 300; letter-spacing: 4px; text-transform: uppercase;
+    color: rgba(253,250,243,0.7); text-align: center;
+  }
+  .qr-wrapper {
+    background: #FDFAF3; border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+    position: relative; z-index: 1;
+  }
+  .qr-wrapper img { display: block; width: 320px; height: 320px; }
+  .address {
+    font-size: 13px; color: rgba(253,250,243,0.55); text-align: center;
+    letter-spacing: 1px; line-height: 1.8; position: relative; z-index: 1;
+  }
+  .scan-text {
+    font-size: 14px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase;
+    color: #C4963C; text-align: center; position: relative; z-index: 1;
+  }
+</style>
+</head>
+<body>
+  <div class='card'>
+    <div class='divider'></div>
+    <div class='title'>SUMATRA<br/><span>CAFE</span></div>
+    <div class='subtitle'>Balık Ekmek &amp; Balık Dürüm</div>
+    <div class='scan-text'>— Menü &amp; İletişim —</div>
+    <div class='qr-wrapper'>
+      <img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAlgAAAJYCAYAAAC+ZpjcAAAAAklEQVR4AewaftIAABWySURBVO3BwY0Ft7IlwKNEG0Av6AjNpiP0goB2AgTNQtvZ1H2J+leNiPjj77/+/CcAALSpAADQqgIAQKsKAACtKgAAtKoAANCqAgBAqwoAAK0qAAC0qgAA0KoCAECrCgAArSoAALSqAADQqgIAQKsKAACtKgAAtKoAANCqAgBAqwoAAK0qAAC0qgAA0KoCAECrCgAArSoAALSqAADQqgIAQKufvGjMFd53z85TY648dc/OU2OufOKenafGXPlt7tl5y5gr3+yend9ozJWn7tl5y5grT92z85YxV95wz85TY67wvnt23lABAKBVBQCAVhUAAFpVAABoVQEAoFUFAIBWFQAAWlUAAGhVAQCgVQUAgFYVAABaVQAAaFUBAKDVT/4D7tkhGXOFf4258oZ7dj4x5sobxlx5yz07T4258ol7dt4y5sob7tl5y5grv82YK5+4Z+epMVe+2T07JGOufLMKAACtKgAAtKoAANCqAgBAqwoAAK0qAAC0qgAA0KoCAECrCgAArSoAALSqAADQqgIAQKuf/FJjrnyze3ZI7tn5xJgrT92z89SYK5+4Z+epMVeeumfnE2OufLMxV566Z+cT9+z8NvfsPDXmyifu2XnDPTtvuWfntxlz5Zvds/PbVAAAaFUBAKBVBQCAVhUAAFpVAABoVQEAoFUFAIBWFQAAWlUAAGhVAQCgVQUAgFYVAABa/QT+P+7ZecOYK5+4Z4fvd8/OW8Zc+cQ9O0+NufKWe3aeGnPlLWOuPHXPzlNjrnzinh34v1ABAKBVBQCAVhUAAFpVAABoVQEAoFUFAIBWFQAAWlUAAGhVAQCgVQUAgFYVAABaVQAAaFUBAKDVT6DJmCvfbMyVp+7Z+WZjrnzinp2nxlx56p6dt9yz84kxV36be3beMubKG+7Z+cSYK0/dswP/qwoAAK0qAAC0qgAA0KoCAECrCgAArSoAALSqAADQqgIAQKsKAACtKgAAtKoAANCqAgBAq5/8Uvfs8LkxV36be3aeGnPlm92z883GXPnEPTtvuWfnqTFXnrpn5xNjrnyze3a+2T07JPfs8K4KAACtKgAAtKoAANCqAgBAqwoAAK0qAAC0qgAA0KoCAECrCgAArSoAALSqAADQqgIAQKuf/AeMucL3u2fnqTFX3jLmylP37HxizJWn7tl5asyVT9yz84Z7dj4x5spT9+x8YsyVp+7ZeWrMlU/cs/PUmCtP3bPziTFXnrpn56kxVz5xz85TY648dc/OW8Zc4ftVAABoVQEAoFUFAIBWFQAAWlUAAGhVAQCgVQUAgFYVAABaVQAAaFUBAKBVBQCAVhUAAFpVAABo9ZMX3bMDHcZcecOYK5+4Z4d3jbnyze7Z+WZjrnzinp3f5p6dN9yzw+9VAQCgVQUAgFYVAABaVQAAaFUBAKBVBQCAVhUAAFpVAABoVQEAoFUFAIBWFQAAWlUAAGj1k19qzJVvds/OU2OufOKenW91z843G3PlE2OuvOGenU+MufLN7tl5asyVT9yz89SYK0/ds/PN7tn5xJgrb7hn5y1jrvw29+y8ZcyVb3bPzhsqAAC0qgAA0KoCAECrCgAArSoAALSqAADQqgIAQKsKAACtKgAAtKoAANCqAgBAqwoAAK1+8kvds/OWMVfecM/ONxtz5al7dj4x5spT9+y85Z6dp8Zc+W3GXPl2Y67we4258tQ9O28Yc+UtY648dc8On6sAANCqAgBAqwoAAK0qAAC0qgAA0KoCAECrCgAArSoAALSqAADQqgIAQKsKAACtKgAAtPrJi8Zc+cQ9O0+NufLUPTtvGXOFz92z89SYK0/ds/OJMVd41z07nxhz5al7dn6bMVc+cc/OU2OuvOWenafGXHnDPTufGHPlqXt23nLPDkkFAIBWFQAAWlUAAGhVAQCgVQUAgFYVAABaVQAAaFUBAKBVBQCAVhUAAFpVAABoVQEAoFUFAIBWP/kPGHPlqXt2fpt7dj4x5spT9+zwrnt2nhpz5S337LxlzJVvNubKU/fsfGLMlafu2flm9+w8NebKN7tn57cZc+UT9+yQVAAAaFUBAKBVBQCAVhUAAFpVAABoVQEAoFUFAIBWFQAAWlUAAGhVAQCgVQUAgFYVAABa/eQ/4J6d3+aenafGXHnLmCtP3bPz1Jgrv9E9O0+NufLUPTvfbMwV/jXmyifu2XlqzJWn7tn5xJgrb7hn5xNjrjx1z85TY648dc/OJ+7Z+WZjrnyze3beUAEAoFUFAIBWFQAAWlUAAGhVAQCgVQUAgFYVAABaVQAAaFUBAKBVBQCAVhUAAFpVAABo9cfff/35T36hMVd+m3t23jLmylP37LxlzJWn7tl5y5grv809O28Zc+Ut9+x8szFXnrpn56kxVz5xz84bxlz5xD07T4258tQ9O28Zc+UN9+x8YsyVb3bPzhsqAAC0qgAA0KoCAECrCgAArSoAALSqAADQqgIAQKsKAACtKgAAtKoAANCqAgBAqwoAAK0qAAC0+smLxlz5xD07b7hn5y1jrjw15spb7tl5asyVp+7Z4X337PC5MVf415grT92z89Q9O58Yc+Wpe3aeGnPlqXt2+Nw9O9+sAgBAqwoAAK0qAAC0qgAA0KoCAECrCgAArSoAALSqAADQqgIAQKsKAACtKgAAtKoAANDqj7//+vOf/EJjrnyze3beMuYK3++enafGXOFf9+y8ZcyVp+7Z+WZjrnzinp03jLnyze7ZeWrMlbfcs/PNxlx5yz07b6gAANCqAgBAqwoAAK0qAAC0qgAA0KoCAECrCgAArSoAALSqAADQqgIAQKsKAACtKgAAtPrJf8CYK2+4Z+ctY6685Z6dbzXmyifu2fltxlx56p6dT4y58tQ9O0+NufKJe3aeGnPlE/fs8K4xV566Z+cTY648dc/OU2OuPHXPzifGXHnDmCvf7J6db1YBAKBVBQCAVhUAAFpVAABoVQEAoFUFAIBWFQAAWlUAAGhVAQCgVQUAgFYVAABaVQAAaFUBAKDVH3//9ec/+XJjrjx1z85bxlx5wz07nxhz5al7dp4ac+Wpe3Y+MebKb3PPDp8bc+Ut9+w8NebKW+7ZecuYK2+4Z+cTY6684Z6dp8Zc4X337LyhAgBAqwoAAK0qAAC0qgAA0KoCAECrCgAArSoAALSqAADQqgIAQKsKAACtKgAAtKoAANDqJ/yfuGfnqTFXPnHPzlNjrjx1z843u2fntxlz5S337Dw15son7tl56p6dT4y58tSYK0/ds/OJMVeeGnPlLffsPDXmylvu2XlqzJWnxlx56p6dt4y58tQ9O58Yc+Wpe3Z+mwoAAK0qAAC0qgAA0KoCAECrCgAArSoAALSqAADQqgIAQKsKAACtKgAAtKoAANCqAgBAqz/+/uvPf/KSMVc+cc/OG8Zc+Wb37Pw2Y67wuXt2PjHmym9zz843G3PlLffsfLMxV95yz85TY658s3t2nhpz5S337LxhzJVP3LPzhgoAAK0qAAC0qgAA0KoCAECrCgAArSoAALSqAADQqgIAQKsKAACtKgAAtKoAANCqAgBAqwoAAK1+8kuNufLUPTufGHPlqXt2nhpz5S337Dw15spT9+x8YsyVp+7ZecuYK0/ds/PUmCtvuWfnqTFXPnHPzlNjrnzinh2SMVc+cc/OU/fsvGXMlTfcs/Pb3LPziTFXnrpn56l7dr5ZBQCAVhUAAFpVAABoVQEAoFUFAIBWFQAAWlUAAGhVAQCgVQUAgFYVAABaVQAAaFUBAKDVT150z84nxlx56p6dt9yz89SYK0/ds/PbjLnyiXt23jDmym90z85TY678RmOu/DZjrjx1z84nxlx56p6dp8Zc+WZjrnyze3a+2Zgrb7ln5w0VAABaVQAAaFUBAKBVBQCAVhUAAFpVAABoVQEAoFUFAIBWFQAAWlUAAGhVAQCgVQUAgFYVAABa/eRFY678RmOuvGHMlbfcs/PNxlx56p6d3+aenU+MufKGe3a+3T07T4258pZ7dt4w5son7tl5asyVp+7ZecuYK2+4Z+ebjbnylnt2fpsKAACtKgAAtKoAANCqAgBAqwoAAK0qAAC0qgAA0KoCAECrCgAArSoAALSqAADQqgIAQKs//v7rz3/y5cZceeqenW825spT9+x8YsyVN9yz89SYK2+5Z+ebjbnylnt23jDmyifu2XnLmCtP3bPz1Jgrb7ln56kxV95yz85TY6584p6dbzXmylvu2fltxlz5xD07b6gAANCqAgBAqwoAAK0qAAC0qgAA0KoCAECrCgAArSoAALSqAADQqgIAQKsKAACtKgAAtPrJi8ZcecuYK2+5Z+cNY6685Z6dN9yz84kxV0ju2XnLmCtP3bPziTFXvtmYK2+5Z+epMVfecs/OU2OuvGXMlafu2XnDPTu/0ZgrT92z89tUAABoVQEAoFUFAIBWFQAAWlUAAGhVAQCgVQUAgFYVAABaVQAAaFUBAKBVBQCAVhUAAFpVAABo9ZP/gHt2nhpz5al7dt5yz843G3PlDffsvGXMlafu2fnEmCtvGHPlE/fs8K97dt4w5so3u2fnE2OuPHXPzlvGXPlWY6584p6dp8Zcecs9O0+NufLbVAAAaFUBAKBVBQCAVhUAAFpVAABoVQEAoFUFAIBWFQAAWlUAAGhVAQCgVQUAgFYVAABa/YT/jDFX3nLPzlNjrjw15son7tl5asyVt9yzQzLmyrcbc+Wpe3aeumfnE2OuPHXPzlNjrnzinp2nxlx56p6dT9yz89SYK0/ds/OWMVeeumfnm92z89tUAABoVQEAoFUFAIBWFQAAWlUAAGhVAQCgVQUAgFYVAABaVQAAaFUBAKBVBQCAVhUAAFr98fdff/6TLzfmyje7Z+epMVeeumfnE2OuvOGenafGXPlm9+x8YsyVN9yz883GXHnLPTtvGXPlqXt23jLmylP37HxizJWn7tl5y5grJPfsPDXmyifu2XlqzJWn7tn5ZhUAAFpVAABoVQEAoFUFAIBWFQAAWlUAAGhVAQCgVQUAgFYVAABaVQAAaFUBAKBVBQCAVhUAAFr98fdff/6Tl4y58ol7dr7ZmCvf7J6dp8ZcecM9O58Yc+W3uWfnqTFXvtk9O/xrzJW33LPz1Jgrn7hn56kxV566Z+cTY6684Z6dp8Zc+cQ9O28Yc+Ut9+w8NebKJ+7ZeUMFAIBWFQAAWlUAAGhVAQCgVQUAgFYVAABaVQAAaFUBAKBVBQCAVhUAAFpVAABoVQEAoNUff//15z95yZgrb7ln55uNufLUPTufGHPlDffsPDXmyje7Z+ctY6685Z4d/jXmyje7Z+epMVe+2T07T4258ol7dt4w5spT9+y8ZcyVp+7Z+cSYK9/snp03VAAAaFUBAKBVBQCAVhUAAFpVAABoVQEAoFUFAIBWFQAAWlUAAGhVAQCgVQUAgFYVAABa/eQ/4J6dp8Zcecs9O28Yc+Ut9+y84Z4dPnfPzjcbc+UT9+w8NebKJ+7ZecOYK58Yc+UN9+y8ZcyVbzbmyhvGXPlmY6584p4dkgoAAK0qAAC0qgAA0KoCAECrCgAArSoAALSqAADQqgIAQKsKAACtKgAAtKoAANCqAgBAqwoAAK1+8kvds/PUmCtvuWeHz4258tQ9O0+NufKWe3aeGnPlm92z85Z7dj4x5spvc8/OW8ZceeqenafGXHnLPTtPjbnyze7ZeWrMFT5XAQCgVQUAgFYVAABaVQAAaFUBAKBVBQCAVhUAAFpVAABoVQEAoFUFAIBWFQAAWlUAAGj1E/5nY678NvfsvGHMlU/cs/PUmCtP3bPziTFX3nDPzifGXHnqnp3f6J6dp8Zc4V/37Dw15spT9+y8ZcyV32bMlafu2fnEmCtP3bPz21QAAGhVAQCgVQUAgFYVAABaVQAAaFUBAKBVBQCAVhUAAFpVAABoVQEAoFUFAIBWFQAAWv3kRffsfLN7dvjXmCtP3bPzze7ZeWrMlU/cs8Pnxlx5yz07T92z89SYK5+4Z+epMVeeumfnE2OuPHXPzlNjrnzinp033LPzzcZc+W3GXPnEPTtvqAAA0KoCAECrCgAArSoAALSqAADQqgIAQKsKAACtKgAAtKoAANCqAgBAqwoAAK0qAAC0+smLxlzhfffsPHXPzlNjrnyzMVfeMuYKn7tn57e5Z+cTY648dc/OU2Ou/EZjrnyrMVc+cc/OG8Zc+cQ9O0+NufLUPTvfrAIAQKsKAACtKgAAtKoAANCqAgBAqwoAAK0qAAC0qgAA0KoCAECrCgAArSoAALSqAADQqgIAQKuf/Afcs0My5so3u2fnqTFXvtk9O58Yc+W3GXPlqXt23jLmylvu2XlqzJW3jLnylnt23nDPzifGXPlW9+zwe1UAAGhVAQCgVQUAgFYVAABaVQAAaFUBAKBVBQCAVhUAAFpVAABoVQEAoFUFAIBWFQAAWv3klxpz5Zvds/PNxlx5wz07nxhz5al7dp4ac+UT9+w8NebKU/fs8L+5Z+epMVeeumfnm4258okxV566Z+epMVc+cc/OU2OuPDXmym9zz84nxlx5w5grn7hn5w0VAABaVQAAaFUBAKBVBQCAVhUAAFpVAABoVQEAoFUFAIBWFQAAWlUAAGhVAQCgVQUAgFY/gSb37HyzMVeeumfnE2OufLMxV566Z+ctY67wuTFXnrpn5xNjrrzhnp1PjLny1D07T4258tQ9O58Yc+Wpe3aeGnOFz1UAAGhVAQCgVQUAgFYVAABaVQAAaFUBAKBVBQCAVhUAAFpVAABoVQEAoFUFAIBWFQAAWlUAAGj1E2gy5spT9+zwr3t23nLPzlNjrvxGY668YcyVbzbmylvGXCEZc+UtY678NvfsfLMKAACtKgAAtKoAANCqAgBAqwoAAK0qAAC0qgAA0KoCAECrCgAArSoAALSqAADQqgIAQKuf/FL37PC5e3beMObKJ+7ZecOYK28Zc+Wpe3becs/OW8ZceeqenU+MufLUPTtvGXPlqXt2nhpz5RP37LxhzJVP3LPz1JgrT92z89SYK5+4Z+epMVeeumfnLWOu/DYVAABaVQAAaFUBAKBVBQCAVhUAAFpVAABoVQEAoFUFAIBWFQAAWlUAAGhVAQCgVQUAgFZ//P3Xn//kJWOu8L57dkjGXOH3umeHf4258tQ9O58Yc+UN9+x8YsyVp+7ZeWrMlafu2fnEmCtvuGeHz1UAAGhVAQCgVQUAgFYVAABaVQAAaFUBAKBVBQCAVhUAAFpVAABoVQEAoFUFAIBWFQAAWlUAAGj1x99//flPAABoUwEAoFUFAIBWFQAAWlUAAGhVAQCgVQUAgFYVAABaVQAAaFUBAKBVBQCAVhUAAFpVAABoVQEAoFUFAIBWFQAAWlUAAGhVAQCgVQUAgFYVAABaVQAAaFUBAKBVBQCAVhUAAFpVAABoVQEAoNX/A/o79E0Zj3OQAAAAAElFTkSuQmCC' />
+    </div>
+    <div class='address'>
+      Güzelyalı Yalı Mah. 37. Sokak No:2<br/>
+      Mudanya / Bursa &nbsp;|&nbsp; Her gün 13:00 – 00:00
+    </div>
+    <div class='divider'></div>
+  </div>
+</body>
+</html>
